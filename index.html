@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="friendsList">
+
+<head>
+    <meta charset="utf-8">
+    <title>First Angular</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body ng-controller="mainController">
+    <h1>Add Friend</h1>
+    <input type="text" name="" id="friendInput" ng-model="friendNameInput" placeholder="Name">
+    <input type="text" name="" ng-model="friendBdayInput" placeholder="Bday">
+    <button type="button" name="button" ng-click="addFriend(friendNameInput, friendBdayInput)">Add Friend</button>
+    <br>
+    <label>Filter Name</label> <br>
+    <input type="text" name="" ng-model="nameFilter"> <br>
+    <label>Filter Bday</label> <br>
+    <input type="text" name="" ng-model="bdayFilter"> <br>
+    <h1>Friends List</h1>
+    <ul>
+        <li ng-repeat="friend in friends | filter: {name: nameFilter, bday: bdayFilter}" ng-click="removeFriend(this)">{{ friend.name }} - {{ friend.bday }}</li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/mainController.js"></script>
+</body>
+
+</html>
