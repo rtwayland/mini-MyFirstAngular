@@ -31,9 +31,9 @@ angular.module('friendsList')
             $scope.friendBdayInput = '';
         }
 
-        $scope.removeFriend = function(e) {
+        $scope.removeFriend = function() {
             for (var i = 0; i < $scope.friends.length; i++) {
-                if ($scope.friends[i].name === e.friend.name) {
+                if ($scope.friends[i].name === this.friend.name) {
                     $scope.friends.splice(i, 1);
                     break;
                 }

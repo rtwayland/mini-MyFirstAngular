@@ -19,7 +19,7 @@
     <input type="text" name="" ng-model="bdayFilter"> <br>
     <h1>Friends List</h1>
     <ul>
-        <li ng-repeat="friend in friends | filter: {name: nameFilter, bday: bdayFilter}" ng-click="removeFriend(this)">{{ friend.name }} - {{ friend.bday }}</li>
+        <li ng-repeat="friend in friends | filter: {name: nameFilter, bday: bdayFilter}" ng-click="removeFriend()">{{ friend.name }} - {{ friend.bday }}</li>
     </ul>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
